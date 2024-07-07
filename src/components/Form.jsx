@@ -3,10 +3,17 @@ import { useState } from "react";
 
 export default function Form() {
   const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(e);
+    setTodos([...todos, todo])
+    setTodo("");
+  };
 
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
           placeholder="Enter task"
@@ -15,6 +22,7 @@ export default function Form() {
         />
         <button>Add</button>
       </form>
+      {console.log(todos)}
     </div>
   );
 }

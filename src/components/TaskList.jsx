@@ -1,8 +1,9 @@
 import Task from "./Task";
+import styles from "./tasklist.module.css"
 
 const TaskList = ({ todos }) => {
   return (
-    <div>
+    <div className={styles.list}>
       {todos.map((task) => (
         <Task key={todos.indexOf(task)} task={task} />
       ))}

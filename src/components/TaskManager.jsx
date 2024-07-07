@@ -9,7 +9,7 @@ export default function TaskManager() {
   return (
     <div>
       <Form todos={todos} setTodos={setTodos} />
-      <TaskList todos={todos} />
+      <TaskList todos={todos} setTodos={setTodos}/>
     </div>
   );
 }

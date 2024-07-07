@@ -25,10 +25,9 @@ export default function Form() {
       </form>
 
       {todos.map((task) => (
-        <Task key={todos.indexOf(task)} task={task}/>
+        <Task key={todos.indexOf(task)} task={task} />
       ))}
-
-      {console.log(todos)}
+      
     </div>
   );
 }

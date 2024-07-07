@@ -1,7 +1,5 @@
-
-
 const Task = ({ task }) => {
-  return <h1 >{task}</h1>;
+  return <h1>{task}</h1>;
 };
 
 export default Task;

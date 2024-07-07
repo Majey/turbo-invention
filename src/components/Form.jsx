@@ -1,10 +1,7 @@
-import React from "react";
 import { useState } from "react";
-import Task from "./Task";
 
-export default function Form() {
+const Form = ({ todos, setTodos }) => {
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault(e);
@@ -23,11 +20,8 @@ export default function Form() {
         />
         <button>Add</button>
       </form>
-
-      {todos.map((task) => (
-        <Task key={todos.indexOf(task)} task={task} />
-      ))}
-      
     </div>
   );
-}
+};
+
+export default Form;

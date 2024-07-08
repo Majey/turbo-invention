@@ -5,11 +5,23 @@ const Task = ({ task, todos, setTodos }) => {
     setTodos(todos.filter((todo) => todo !== task));
   };
 
+  const handleClick = (name) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.name === name ? { ...todo, done: !todo.done } : todo
+      )
+    );
+  };
+
+  const strikeThrough = task.done ? styles.completed : "";
+
   return (
     <div className={styles.task}>
       <hr className={styles.line} />
       <div className={styles.taskName}>
-        {task.name}
+        <span className={strikeThrough} onClick={() => handleClick(task.name)}>
+          {task.name}
+        </span>
         <span>
           <button
             onClick={() => handleDelete(task)}

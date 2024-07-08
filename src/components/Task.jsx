@@ -9,7 +9,7 @@ const Task = ({ task, todos, setTodos }) => {
     <div className={styles.task}>
       <hr className={styles.line} />
       <div className={styles.taskName}>
-        {task}
+        {task.name}
         <span>
           <button
             onClick={() => handleDelete(task)}

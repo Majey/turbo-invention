@@ -5,7 +5,7 @@ const TaskList = ({ todos, setTodos }) => {
   return (
     <div className={styles.list}>
       {todos.map((task) => (
-        <Task key={todos.indexOf(task)} task={task} todos={todos} setTodos={setTodos}/>
+        <Task key={task.name} task={task} todos={todos} setTodos={setTodos}/>
       ))}
     </div>
   );

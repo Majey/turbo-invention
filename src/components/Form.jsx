@@ -17,7 +17,7 @@ const Form = ({ todos, setTodos }) => {
           <input
             className={styles.modernInput}
             type="text"
-            placeholder="Enter task"
+            placeholder="Add task ..."
             onChange={(e) => setTodo({ name: e.target.value, done: false })}
             value={todo.name}
           />
